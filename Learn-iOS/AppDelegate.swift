@@ -16,6 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let userViewController = storyboard.instantiateViewController(withIdentifier: "UserViewController") as? UserViewController
+        let postViewController = storyboard.instantiateViewController(withIdentifier: "PostViewController") as? PostViewController
+        
+        userViewController?.tabBarItem = UITabBarItem(title: "Users", image: nil, tag: 0)
+        postViewController?.tabBarItem = UITabBarItem(title: "Posts", image: nil, tag: 1)
+        
+        let tabbarController = UITabBarController()
+        tabbarController.viewControllers = [userViewController, postViewController] as! [UIViewController]
+        
+        window?.rootViewController = tabbarController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

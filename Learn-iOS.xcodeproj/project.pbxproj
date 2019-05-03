@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		04684197227C3B93007DAB7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04684196227C3B93007DAB7C /* AppDelegate.swift */; };
-		04684199227C3B93007DAB7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04684198227C3B93007DAB7C /* ViewController.swift */; };
 		0468419C227C3B93007DAB7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0468419A227C3B93007DAB7C /* Main.storyboard */; };
 		0468419E227C3B94007DAB7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0468419D227C3B94007DAB7C /* Assets.xcassets */; };
 		046841A1227C3B94007DAB7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0468419F227C3B94007DAB7C /* LaunchScreen.storyboard */; };
 		046841AC227C3B94007DAB7C /* Learn_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046841AB227C3B94007DAB7C /* Learn_iOSTests.swift */; };
 		046841B7227C3B94007DAB7C /* Learn_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046841B6227C3B94007DAB7C /* Learn_iOSUITests.swift */; };
+		046841C9227C3C55007DAB7C /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046841C8227C3C55007DAB7C /* UserViewController.swift */; };
+		046841CB227C3C69007DAB7C /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046841CA227C3C69007DAB7C /* PostViewController.swift */; };
+		046841CE227C41AE007DAB7C /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046841CC227C41AE007DAB7C /* UserTableViewCell.swift */; };
+		046841CF227C41AE007DAB7C /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046841CD227C41AE007DAB7C /* UserTableViewCell.xib */; };
+		046841D2227C41C4007DAB7C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046841D0227C41C4007DAB7C /* PostTableViewCell.swift */; };
+		046841D3227C41C4007DAB7C /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046841D1227C41C4007DAB7C /* PostTableViewCell.xib */; };
+		046841D5227C4261007DAB7C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046841D4227C4261007DAB7C /* User.swift */; };
+		046841D7227C42AD007DAB7C /* UserAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046841D6227C42AD007DAB7C /* UserAdapter.swift */; };
+		046841DA227C4525007DAB7C /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046841D9227C4525007DAB7C /* ApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,6 @@
 /* Begin PBXFileReference section */
 		04684193227C3B93007DAB7C /* Learn-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04684196227C3B93007DAB7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04684198227C3B93007DAB7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0468419B227C3B93007DAB7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0468419D227C3B94007DAB7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		046841A0227C3B94007DAB7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +54,15 @@
 		046841B2227C3B94007DAB7C /* Learn-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Learn-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		046841B6227C3B94007DAB7C /* Learn_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn_iOSUITests.swift; sourceTree = "<group>"; };
 		046841B8227C3B94007DAB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046841C8227C3C55007DAB7C /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		046841CA227C3C69007DAB7C /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		046841CC227C41AE007DAB7C /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		046841CD227C41AE007DAB7C /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		046841D0227C41C4007DAB7C /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		046841D1227C41C4007DAB7C /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		046841D4227C4261007DAB7C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		046841D6227C42AD007DAB7C /* UserAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAdapter.swift; sourceTree = "<group>"; };
+		046841D9227C4525007DAB7C /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +113,11 @@
 		04684195227C3B93007DAB7C /* Learn-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				046841D8227C450E007DAB7C /* Service */,
+				046841C7227C3C10007DAB7C /* ViewControllers */,
+				046841C5227C3C01007DAB7C /* Views */,
+				046841C4227C3BCF007DAB7C /* Models */,
 				04684196227C3B93007DAB7C /* AppDelegate.swift */,
-				04684198227C3B93007DAB7C /* ViewController.swift */,
 				0468419A227C3B93007DAB7C /* Main.storyboard */,
 				0468419D227C3B94007DAB7C /* Assets.xcassets */,
 				0468419F227C3B94007DAB7C /* LaunchScreen.storyboard */,
@@ -123,6 +142,51 @@
 				046841B8227C3B94007DAB7C /* Info.plist */,
 			);
 			path = "Learn-iOSUITests";
+			sourceTree = "<group>";
+		};
+		046841C4227C3BCF007DAB7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				046841D4227C4261007DAB7C /* User.swift */,
+				046841D6227C42AD007DAB7C /* UserAdapter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		046841C5227C3C01007DAB7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				046841C6227C3C08007DAB7C /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		046841C6227C3C08007DAB7C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				046841CC227C41AE007DAB7C /* UserTableViewCell.swift */,
+				046841CD227C41AE007DAB7C /* UserTableViewCell.xib */,
+				046841D0227C41C4007DAB7C /* PostTableViewCell.swift */,
+				046841D1227C41C4007DAB7C /* PostTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		046841C7227C3C10007DAB7C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				046841C8227C3C55007DAB7C /* UserViewController.swift */,
+				046841CA227C3C69007DAB7C /* PostViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		046841D8227C450E007DAB7C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				046841D9227C4525007DAB7C /* ApiManager.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +293,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046841CF227C41AE007DAB7C /* UserTableViewCell.xib in Resources */,
+				046841D3227C41C4007DAB7C /* PostTableViewCell.xib in Resources */,
 				046841A1227C3B94007DAB7C /* LaunchScreen.storyboard in Resources */,
 				0468419E227C3B94007DAB7C /* Assets.xcassets in Resources */,
 				0468419C227C3B93007DAB7C /* Main.storyboard in Resources */,
@@ -256,8 +322,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04684199227C3B93007DAB7C /* ViewController.swift in Sources */,
+				046841DA227C4525007DAB7C /* ApiManager.swift in Sources */,
+				046841CE227C41AE007DAB7C /* UserTableViewCell.swift in Sources */,
+				046841CB227C3C69007DAB7C /* PostViewController.swift in Sources */,
+				046841D5227C4261007DAB7C /* User.swift in Sources */,
+				046841D2227C41C4007DAB7C /* PostTableViewCell.swift in Sources */,
+				046841D7227C42AD007DAB7C /* UserAdapter.swift in Sources */,
 				04684197227C3B93007DAB7C /* AppDelegate.swift in Sources */,
+				046841C9227C3C55007DAB7C /* UserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
