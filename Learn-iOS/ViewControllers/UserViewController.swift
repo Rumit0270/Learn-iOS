@@ -48,6 +48,17 @@ class UserViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return users?.count ?? 0
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedUser = users?[indexPath.row]
+        ApiManager.getInstance().getPosts(userId: selectedUser!.id) {
+            posts in
+            let viewController: PostViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PostViewController") as! PostViewController
+            viewController.posts = posts
+            self.present(viewController, animated: false, completion: nil)
+        }
+        
+    }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

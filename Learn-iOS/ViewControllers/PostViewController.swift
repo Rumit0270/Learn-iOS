@@ -9,10 +9,15 @@
 import UIKit
 
 class PostViewController: UITableViewController {
+    
+    var posts: [Post]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        let postCell = UINib.init(nibName: "PostTableViewCell", bundle: nil)
+        tableView.register(postCell, forCellReuseIdentifier: "PostTableViewCell")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -24,23 +29,26 @@ class PostViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return posts?.count ?? 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell", for: indexPath) as? PostTableViewCell
+        
+        let post = posts?[indexPath.row]
+    
+        cell?.postIdLabel.text = post?.id
+        cell?.postBodyLabel.text = post?.body
+        cell?.postTitleLabel.text = post?.title
+        return cell!
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

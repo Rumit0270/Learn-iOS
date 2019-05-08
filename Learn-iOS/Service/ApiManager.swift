@@ -41,4 +41,31 @@ class ApiManager {
         }
         
     }
+    
+    func getPosts(userId: String, completion: @escaping ([Post]?) -> Void) {
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts?userId=\(userId)") else {
+            return
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        var posts = [Post]()
+        AF.request(urlRequest).validate().responseJSON {
+            response in
+            
+            guard let jsonArray = response.value as? [[String: Any]] else {
+                return
+            }
+            
+            for post in jsonArray {
+                if let id = post["id"] as? Int, let userId = post["userId"] as? Int, let title = post["title"] as? String, let body = post["body"] as? String {
+                    posts.append(Post(userId: String(describing: userId), id: String(describing: id), title: title, body: body))
+                }
+            }
+            completion(posts)
+        }
+        
+    }
 }
