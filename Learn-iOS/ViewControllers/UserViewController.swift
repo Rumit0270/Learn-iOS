@@ -25,6 +25,12 @@ class UserViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        ApiManager.getInstance().getUsers {
+            users in
+            self.users = users
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source
@@ -32,6 +38,10 @@ class UserViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Users"
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
