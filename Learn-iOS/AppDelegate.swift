@@ -29,7 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabbarController = UITabBarController()
         tabbarController.viewControllers = [userViewController, postViewController] as! [UIViewController]
         
-        window?.rootViewController = tabbarController
+        //Instantiate a navigation controller
+        let nav = UINavigationController()
+        nav.viewControllers = [tabbarController]
+        window?.rootViewController = nav
         window?.makeKeyAndVisible()
         
         return true

@@ -71,6 +71,26 @@ class UserViewController: UITableViewController {
         return cell!
     }
     
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") {
+            (action, indexPath) in
+            
+            //delete item at index path
+            self.users?.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        }
+        
+        let share = UITableViewRowAction(style: .default, title: "Share") {
+            (action, indexPath) in
+            
+        }
+        share.backgroundColor = UIColor.lightGray
+        
+        return [delete, share]
+    }
 
     /*
     // Override to support conditional editing of the table view.
