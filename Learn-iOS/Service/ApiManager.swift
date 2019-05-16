@@ -33,9 +33,7 @@ class ApiManager {
             }
             
             for userDetail in jsonArray {
-                if let id = userDetail["id"] as? Int, let name = userDetail["name"] as? String {
-                    users.append(User(id: String(describing: id), name: name))
-                }
+                users.append(User.fromJSON(userDetail))
             }
             completion(users)
         }

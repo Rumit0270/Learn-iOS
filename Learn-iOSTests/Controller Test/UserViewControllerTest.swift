@@ -26,7 +26,7 @@ class UserViewControllerTest: XCTestCase {
     }
     
     func testNumberOfUsers() {
-            print(vc.tableView.numberOfRows(inSection: 0) == 2)
+        XCTAssert(vc.tableView.numberOfRows(inSection: 0) == 2)
     }
     
 }

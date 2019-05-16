@@ -24,6 +24,8 @@
 		046841DA227C4525007DAB7C /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046841D9227C4525007DAB7C /* ApiManager.swift */; };
 		048F1EFF228292BA0059C88E /* UserViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F1EFE228292BA0059C88E /* UserViewControllerTest.swift */; };
 		048F1F012282D9460059C88E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F1F002282D9460059C88E /* Post.swift */; };
+		04EED426228D11CB0098017B /* JSONAbleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EED425228D11CB0098017B /* JSONAbleType.swift */; };
+		04EED42B228D18790098017B /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EED42A228D18780098017B /* UserTests.swift */; };
 		11854FEABC7314610165C9FA /* Pods_Learn_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 997E10D8EB6011F5608EC51F /* Pods_Learn_iOSTests.framework */; };
 		23ED879DC8575E84B2814B31 /* Pods_Learn_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372F24038A40026F488DFFCF /* Pods_Learn_iOSUITests.framework */; };
 		70B87A8A800B2C5E1818957B /* Pods_Learn_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92439D3234E9F5CF792D6DFF /* Pods_Learn_iOS.framework */; };
@@ -70,6 +72,8 @@
 		046841D9227C4525007DAB7C /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		048F1EFE228292BA0059C88E /* UserViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControllerTest.swift; sourceTree = "<group>"; };
 		048F1F002282D9460059C88E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		04EED425228D11CB0098017B /* JSONAbleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAbleType.swift; sourceTree = "<group>"; };
+		04EED42A228D18780098017B /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		2B4D47C6C21D2C96BAC6EBA2 /* Pods-Learn-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Learn-iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Learn-iOSUITests/Pods-Learn-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		372F24038A40026F488DFFCF /* Pods_Learn_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Learn_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60006936794F6E777133836C /* Pods-Learn-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Learn-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Learn-iOSTests/Pods-Learn-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 		046841AA227C3B94007DAB7C /* Learn-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				04EED427228D182D0098017B /* ModelTests */,
 				048F1EFD228292920059C88E /* Controller Test */,
 				046841AB227C3B94007DAB7C /* Learn_iOSTests.swift */,
 				046841AD227C3B94007DAB7C /* Info.plist */,
@@ -182,6 +187,7 @@
 		046841C4227C3BCF007DAB7C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				04EED424228D11A10098017B /* Protocol */,
 				046841D4227C4261007DAB7C /* User.swift */,
 				046841D6227C42AD007DAB7C /* UserAdapter.swift */,
 				048F1F002282D9460059C88E /* Post.swift */,
@@ -231,6 +237,22 @@
 				048F1EFE228292BA0059C88E /* UserViewControllerTest.swift */,
 			);
 			path = "Controller Test";
+			sourceTree = "<group>";
+		};
+		04EED424228D11A10098017B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				04EED425228D11CB0098017B /* JSONAbleType.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		04EED427228D182D0098017B /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				04EED42A228D18780098017B /* UserTests.swift */,
+			);
+			path = ModelTests;
 			sourceTree = "<group>";
 		};
 		E7FE80C39D3EA8EF5E424F24 /* Frameworks */ = {
@@ -515,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				046841DA227C4525007DAB7C /* ApiManager.swift in Sources */,
+				04EED426228D11CB0098017B /* JSONAbleType.swift in Sources */,
 				046841CE227C41AE007DAB7C /* UserTableViewCell.swift in Sources */,
 				046841CB227C3C69007DAB7C /* PostViewController.swift in Sources */,
 				046841D5227C4261007DAB7C /* User.swift in Sources */,
@@ -530,6 +553,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EED42B228D18790098017B /* UserTests.swift in Sources */,
 				046841AC227C3B94007DAB7C /* Learn_iOSTests.swift in Sources */,
 				048F1EFF228292BA0059C88E /* UserViewControllerTest.swift in Sources */,
 			);

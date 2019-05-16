@@ -32,7 +32,7 @@ class UserViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
-
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -77,6 +77,7 @@ class UserViewController: UITableViewController {
         let delete = UITableViewRowAction(style: .destructive, title: "Delete") {
             (action, indexPath) in
             
+            let userId = self.users?[indexPath.row].id
             //delete item at index path
             self.users?.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
